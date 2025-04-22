@@ -1,0 +1,131 @@
+/* Styles par défaut (Ordinateur) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+.contenu {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.colonne {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.colonne1, .colonne2 {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rubriques {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.rubriques .colonne {
+    flex: 1;
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rubriques a {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Styles pour tablette */
+@media (max-width: 1024px) {
+    .rubriques, .contenu {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .rubriques .colonne, .colonne1, .colonne2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    header a {
+        margin: 5px 10px;
+        font-size: 1rem;
+    }
+}
+
+/* Styles pour mobile */
+@media (max-width: 576px) {
+    header, footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .rubriques .colonne {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .contenu, .rubriques {
+        padding: 0 5px;
+    }
+
+    .conteneur-image-texte img {
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    header a {
+        display: block;
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+}
